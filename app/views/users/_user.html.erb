@@ -1,0 +1,14 @@
+<div class="bg-gray-800 p-6 rounded-lg shadow-md mb-3" id="<%= dom_id(@user) %>">
+  <h1 class="text-3xl font-semibold mb-4"><%= @user.full_name %></h1>
+  <p class="text-gray-400 mb-4">Fullstack Developer</p>
+  <p class="text-gray-400 mb-4"><%= @user.introduction %></p>
+  <hr class="my-4 border-gray-700">
+  <div>
+    <h2 class="text-lg font-semibold mb-2">Contact Information</h2>
+    <p class="mb-2">Location: <%= @user.location %></p>
+    <p class="mb-2">Phone: <%= @user.phone_number %></p>
+    <p class="mb-2">Email: <%= @user.email %></p>
+    <p class="mb-2">LinkedIn: <a href="https://www.linkedin.com/in/alejandro-lopez-b49795ba/">alejandro-lopez-b49795ba</a></p>
+    <p class="mb-2">Github: <a href="https://github.com/alejolopez91">alejolopez91</a></p>
+  </div>
+</div>
