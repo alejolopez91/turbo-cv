@@ -1,0 +1,14 @@
+<body class="bg-gray-900 text-white font-sans">
+  <div class="mx-auto px-4 py-8">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-md mb-3" id="main">
+      <div>
+        <h2 class="text-lg font-semibold mb-2">Education</h2>
+        <% @user.user_studies.each do |study| %>
+          <%= turbo_stream_from study %>
+          <%= render study, study: study %>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to 'Back', user_path(@user) %>
+  </div>
+</body>

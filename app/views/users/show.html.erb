@@ -1,10 +1,9 @@
 <body class="bg-gray-900 text-white font-sans">
   <div class="mx-auto px-4 py-8">
-      <%= turbo_frame_tag 'main' do %>
-        <%= turbo_stream_from @user %>
-        <%= render @user %>
-        <%= link_to 'studies', studies_user_path(@user), data: { turbo_stream: true } %>
-        <%= link_to 'experience', works_user_path(@user), data: { turbo_stream: true } %>
-      <% end %>
+    <%= turbo_stream_from @user %>
+    <%= render @user %>
+    <%= link_to 'Back', users_path %>
+    <%= link_to 'Studies', studies_user_path(@user), data: { turbo_stream: true } %>
+    <%= link_to 'Experience', works_user_path(@user), data: { turbo_stream: true } %>
   </div>
 </body>
