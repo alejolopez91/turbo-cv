@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample project to create multiple CV using view-transitions and turbo on a rails application
 
-Things you may want to cover:
+https://www.loom.com/share/de42260a0384498aae48434c84b19a04?sid=b539c848-e177-44c0-b66f-b87b6eed0ef9
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
