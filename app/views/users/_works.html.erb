@@ -1,0 +1,10 @@
+<div class="bg-gray-800 p-6 rounded-lg shadow-md mb-3" id="main">
+  <div>
+    <h2 class="text-lg font-semibold mb-2">Experience</h2>
+    <% user.user_works.each do |work| %>
+      <%= turbo_stream_from work %>
+      <%= render work, work: work %>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Back', user_path(user) %>

@@ -1,24 +1,10 @@
 <body class="bg-gray-900 text-white font-sans">
-    <div class="container mx-auto px-4 py-8">
+  <div class="mx-auto px-4 py-8">
+      <%= turbo_frame_tag 'main' do %>
         <%= turbo_stream_from @user %>
         <%= render @user %>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md mb-3">
-            <div>
-                <h2 class="text-lg font-semibold mb-2">Education</h2>
-                  <% @user.user_studies.each do |study| %>
-                    <%= turbo_stream_from study %>
-                    <%= render study, study: study %>
-                  <% end %>
-            </div>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
-            <div>
-                <h2 class="text-lg font-semibold mb-2">Experience</h2>
-                <% @user.user_works.each do |work| %>
-                  <%= turbo_stream_from work %>
-                  <%= render work, work: work %>
-                <% end %>
-            </div>
-        </div>
-    </div>
+        <%= link_to 'studies', studies_user_path(@user), data: { turbo_stream: true } %>
+        <%= link_to 'experience', works_user_path(@user), data: { turbo_stream: true } %>
+      <% end %>
+  </div>
 </body>
